@@ -17,8 +17,9 @@ namespace Crudapplication.Controllers
             var productList=_productDAL.GetAllProducts();
             if(productList.Count == 0)
             {
-                TempData["InfoMessage"] = "Currently product not avaliable in the database";
+                TempData["InfoMessage"] = "Currently product not avaliable in the database"; //when there is shift of work from one controller to another
             }
+            ViewBag.Message = "Welcome to my website!"; //ViewBag property is typically used to pass data from the controller to the view
             return View(productList);
         }
 
