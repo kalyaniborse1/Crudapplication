@@ -14,7 +14,7 @@ namespace Crudapplication.Controllers
         ProductDAL _productDAL=new ProductDAL();
         public ActionResult Index()
         {
-            var productList=_productDAL.GetAllProducts();
+            var productList= _productDAL.GetAllProducts();
             if(productList.Count == 0)
             {
                 TempData["InfoMessage"] = "Currently product not avaliable in the database"; //when there is shift of work from one controller to another
@@ -24,7 +24,7 @@ namespace Crudapplication.Controllers
         }
 
         // GET: Product/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int id) //create an object 
         {
             try
             {
