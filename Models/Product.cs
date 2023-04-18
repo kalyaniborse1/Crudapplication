@@ -12,7 +12,7 @@ namespace Crudapplication.Models
         [Key]
         public int ProductID { get; set; }
         [Required]
-        //[DisplayName("Product Name")] hhhhh
+        //[DisplayName("Product Name")]
         public string ProductName { get; set; }
         [Required]
         public decimal Price { get; set; }
